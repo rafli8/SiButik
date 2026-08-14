@@ -1,0 +1,4 @@
+/* Fix: carousel card items tidak shrink karena min-width: auto */
+.carousel-item {
+    min-width: 0;
+}

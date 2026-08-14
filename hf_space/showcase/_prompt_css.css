@@ -1,0 +1,4 @@
+/* Hapus margin-top pada .prompt-text karena tidak ada .prompt-pair lagi */
+.prompt-text {
+    margin-top: 0;
+}

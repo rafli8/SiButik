@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-08-12 13:39",
+  "total_pairs": 21,
+  "success": 21,
+  "failed": 0,
+  "lora_source": "madura-madura_pola_kompleks-joint-lora-000001",
+  "entries": [
+    {
+      "id": "yogyakarta__madura",
+      "judul": "Fusion Yogyakarta × Madura — Pola Sederhana",
+      "image": "images/fusion_yogyakarta_madura_pola_kompleks.png",
+      "trigger_1": "yogyakartabatik",
+      "trigger_2": "madura_pola_sederhanabatik",
+      "prompt": "a yogyakartabatik madura_pola_sederhanabatik batik pattern, fusion of Yogyakarta and Madura — Pola Sederhana"
+    },
+    {
+      "id": "yogyakarta__madura",
+      "judul": "Fusion Yogyakarta × Madura — Pola Kompleks",
+      "image": "images/fusion_yogyakarta_madura.png",
+      "trigger_1": "yogyakartabatik",
+      "trigger_2": "madura_pola_kompleksbatik",
+      "prompt": "a yogyakartabatik madura_pola_kompleksbatik batik pattern, fusion of Yogyakarta and Madura — Pola Kompleks"
+    },
+    {
+      "id": "yogyakarta__madura",
+      "judul": "Fusion Yogyakarta × Madura — Klasik",
+      "image": "images/fusion_yogyakarta_jawa_timur.png",
+      "trigger_1": "yogyakartabatik",
+      "trigger_2": "madurabatik",
+      "prompt": "a yogyakartabatik madurabatik batik pattern, fusion of Yogyakarta and Madura — Klasik"
+    },
+    {
+      "id": "yogyakarta__jawa timur",
+      "judul": "Fusion Yogyakarta × Jawa Timur",
+      "image": "images/fusion_yogyakarta_jawa_tengah.png",
+      "trigger_1": "yogyakartabatik",
+      "trigger_2": "jawa_timurbatik",
+      "prompt": "a yogyakartabatik jawa_timurbatik batik pattern, fusion of Yogyakarta and Jawa Timur"
+    },
+    {
+      "id": "yogyakarta__jawa tengah",
+      "judul": "Fusion Yogyakarta × Jawa Tengah",
+      "image": "images/fusion_yogyakarta_jawa_barat.png",
+      "trigger_1": "yogyakartabatik",
+      "trigger_2": "jawa_tengahbatik",
+      "prompt": "a yogyakartabatik jawa_tengahbatik batik pattern, fusion of Yogyakarta and Jawa Tengah"
+    },
+    {
+      "id": "yogyakarta__jawa barat",
+      "judul": "Fusion Yogyakarta × Jawa Barat",
+      "image": "images/fusion_madura_pola_sederhana_madura_pola_kompleks.png",
+      "trigger_1": "yogyakartabatik",
+      "trigger_2": "jawa_baratbatik",
+      "prompt": "a yogyakartabatik jawa_baratbatik batik pattern, fusion of Yogyakarta and Jawa Barat"
+    },
+    {
+      "id": "madura__madura",
+      "judul": "Fusion Madura — Pola Sederhana × Madura — Pola Kompleks",
+      "image": "images/fusion_madura_pola_sederhana_madura.png",
+      "trigger_1": "madura_pola_sederhanabatik",
+      "trigger_2": "madura_pola_kompleksbatik",
+      "prompt": "a madura_pola_sederhanabatik madura_pola_kompleksbatik batik pattern, fusion of Madura — Pola Sederhana and Madura — Pola Kompleks"
+    },
+    {
+      "id": "madura — pola sederhana__madura",
+      "judul": "Fusion Madura — Pola Sederhana × Madura — Klasik",
+      "image": "images/fusion_madura_pola_sederhana_jawa_timur.png",
+      "trigger_1": "madura_pola_sederhanabatik",
+      "trigger_2": "madurabatik",
+      "prompt": "a madura_pola_sederhanabatik madurabatik batik pattern, fusion of Madura — Pola Sederhana and Madura — Klasik"
+    },
+    {
+      "id": "madura__jawa timur",
+      "judul": "Fusion Madura — Pola Sederhana × Jawa Timur",
+      "image": "images/fusion_madura_pola_sederhana_jawa_tengah.png",
+      "trigger_1": "madura_pola_sederhanabatik",
+      "trigger_2": "jawa_timurbatik",
+      "prompt": "a madura_pola_sederhanabatik jawa_timurbatik batik pattern, fusion of Madura — Pola Sederhana and Jawa Timur"
+    },
+    {
+      "id": "madura__jawa tengah",
+      "judul": "Fusion Madura — Pola Sederhana × Jawa Tengah",
+      "image": "images/fusion_madura_pola_sederhana_jawa_barat.png",
+      "trigger_1": "madura_pola_sederhanabatik",
+      "trigger_2": "jawa_tengahbatik",
+      "prompt": "a madura_pola_sederhanabatik jawa_tengahbatik batik pattern, fusion of Madura — Pola Sederhana and Jawa Tengah"
+    },
+    {
+      "id": "madura__jawa barat",
+      "judul": "Fusion Madura — Pola Sederhana × Jawa Barat",
+      "image": "images/fusion_madura_pola_kompleks_madura.png",
+      "trigger_1": "madura_pola_sederhanabatik",
+      "trigger_2": "jawa_baratbatik",
+      "prompt": "a madura_pola_sederhanabatik jawa_baratbatik batik pattern, fusion of Madura — Pola Sederhana and Jawa Barat"
+    },
+    {
+      "id": "madura — pola kompleks__madura",
+      "judul": "Fusion Madura — Pola Kompleks × Madura — Klasik",
+      "image": "images/fusion_madura_pola_kompleks_jawa_timur.png",
+      "trigger_1": "madura_pola_kompleksbatik",
+      "trigger_2": "madurabatik",
+      "prompt": "a madura_pola_kompleksbatik madurabatik batik pattern, fusion of Madura — Pola Kompleks and Madura — Klasik"
+    },
+    {
+      "id": "madura__jawa timur",
+      "judul": "Fusion Madura — Pola Kompleks × Jawa Timur",
+      "image": "images/fusion_madura_pola_kompleks_jawa_tengah.png",
+      "trigger_1": "madura_pola_kompleksbatik",
+      "trigger_2": "jawa_timurbatik",
+      "prompt": "a madura_pola_kompleksbatik jawa_timurbatik batik pattern, fusion of Madura — Pola Kompleks and Jawa Timur"
+    },
+    {
+      "id": "madura__jawa tengah",
+      "judul": "Fusion Madura — Pola Kompleks × Jawa Tengah",
+      "image": "images/fusion_madura_pola_kompleks_jawa_barat.png",
+      "trigger_1": "madura_pola_kompleksbatik",
+      "trigger_2": "jawa_tengahbatik",
+      "prompt": "a madura_pola_kompleksbatik jawa_tengahbatik batik pattern, fusion of Madura — Pola Kompleks and Jawa Tengah"
+    },
+    {
+      "id": "madura__jawa barat",
+      "judul": "Fusion Madura — Pola Kompleks × Jawa Barat",
+      "image": "images/fusion_madura_jawa_timur.png",
+      "trigger_1": "madura_pola_kompleksbatik",
+      "trigger_2": "jawa_baratbatik",
+      "prompt": "a madura_pola_kompleksbatik jawa_baratbatik batik pattern, fusion of Madura — Pola Kompleks and Jawa Barat"
+    },
+    {
+      "id": "madura__jawa timur",
+      "judul": "Fusion Madura — Klasik × Jawa Timur",
+      "image": "images/fusion_madura_jawa_tengah.png",
+      "trigger_1": "madurabatik",
+      "trigger_2": "jawa_timurbatik",
+      "prompt": "a madurabatik jawa_timurbatik batik pattern, fusion of Madura — Klasik and Jawa Timur"
+    },
+    {
+      "id": "madura__jawa tengah",
+      "judul": "Fusion Madura — Klasik × Jawa Tengah",
+      "image": "images/fusion_madura_jawa_barat.png",
+      "trigger_1": "madurabatik",
+      "trigger_2": "jawa_tengahbatik",
+      "prompt": "a madurabatik jawa_tengahbatik batik pattern, fusion of Madura — Klasik and Jawa Tengah"
+    },
+    {
+      "id": "madura__jawa barat",
+      "judul": "Fusion Madura — Klasik × Jawa Barat",
+      "image": "images/fusion_jawa_timur_jawa_tengah.png",
+      "trigger_1": "madurabatik",
+      "trigger_2": "jawa_baratbatik",
+      "prompt": "a madurabatik jawa_baratbatik batik pattern, fusion of Madura — Klasik and Jawa Barat"
+    },
+    {
+      "id": "jawa timur__jawa tengah",
+      "judul": "Fusion Jawa Timur × Jawa Tengah",
+      "image": "images/fusion_jawa_timur_jawa_barat.png",
+      "trigger_1": "jawa_timurbatik",
+      "trigger_2": "jawa_tengahbatik",
+      "prompt": "a jawa_timurbatik jawa_tengahbatik batik pattern, fusion of Jawa Timur and Jawa Tengah"
+    },
+    {
+      "id": "jawa timur__jawa barat",
+      "judul": "Fusion Jawa Timur × Jawa Barat",
+      "image": "images/fusion_jawa_tengah_jawa_barat.png",
+      "trigger_1": "jawa_timurbatik",
+      "trigger_2": "jawa_baratbatik",
+      "prompt": "a jawa_timurbatik jawa_baratbatik batik pattern, fusion of Jawa Timur and Jawa Barat"
+    },
+    {
+      "id": "jawa tengah__jawa barat",
+      "judul": "Fusion Jawa Tengah × Jawa Barat",
+      "image": "images/fusion_unknown.png",
+      "trigger_1": "jawa_tengahbatik",
+      "trigger_2": "jawa_baratbatik",
+      "prompt": "a jawa_tengahbatik jawa_baratbatik batik pattern, fusion of Jawa Tengah and Jawa Barat"
+    }
+  ]
+}

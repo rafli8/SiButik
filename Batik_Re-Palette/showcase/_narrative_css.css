@@ -1,0 +1,77 @@
+/* ===================== NARRATIVE + PROMPTS BLOCK ===================== */
+.fusion-narrative-block {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 20px 24px 24px;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.fusion-narrative {
+    background: linear-gradient(135deg, rgba(244, 162, 97, 0.06) 0%, rgba(168, 213, 178, 0.04) 100%);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+.fusion-narrative .narrative-title,
+.fusion-prompts .prompts-title {
+    font-size: 0.95rem;
+    color: var(--accent-bright);
+    margin: 0 0 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.narrative-body {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 1.6em;
+}
+.fusion-prompts {
+    background: var(--elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+.prompt-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.prompt-item {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+.prompt-pair {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+.prompt-text {
+    display: block;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    background: var(--bg);
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-subtle);
+    word-break: break-word;
+    line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+    .fusion-narrative-block { grid-template-columns: 1fr; padding: 16px; }
+}

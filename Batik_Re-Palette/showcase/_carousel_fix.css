@@ -1,0 +1,4 @@
+/* Fix: carousel terlalu kecil (8px) karena min-width: auto dengan banyak child flex-basis 100% */
+.carousel {
+    min-width: 0;
+}

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SiButik: Silang Budaya Batik - Generator Cultural Fusion Batik Nusantara</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="gradio-container">
+
+    <header class="gradio-header">
+        <div class="gradio-header-inner">
+            <div class="brand">
+                <span class="brand-mark">S</span>
+                <div>
+                    <h1>SiButik</h1>
+                    <p class="brand-sub">Silang Budaya Batik &mdash; Generator Cultural Fusion Batik Nusantara</p>
+                </div>
+            </div>
+            <p class="meta">
+                SDXL + LoRA Joint Training
+            </p>
+        </div>
+    </header>
+
+    <main class="gradio-main">
+
+        <!-- ============================== SECTION 1: GENERATOR ============================== -->
+        <section class="section section-config">
+            <header class="section-head">
+                <span class="section-num">1</span>
+                <div>
+                    <h2>Generator</h2>
+                    <p class="section-sub">Pilih budaya yang akan digabungkan dan tulis prompt sesuai keinginan.</p>
+                </div>
+            </header>
+
+            <div class="gradio-row two-col">
+                <div class="gradio-column">
+                    <label class="gradio-label" for="budaya1">Budaya 1 <span class="hint">(wajib)</span></label>
+                    <select id="budaya1" class="gradio-select">
+                        <option value="">&mdash; Pilih budaya pertama &mdash;</option>
+                                                <option value="Jawa Barat">Jawa Barat</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Timur">Jawa Timur</option>
+                        <option value="Madura — Klasik">Madura — Klasik</option>
+                        <option value="Madura — Pola Kompleks">Madura — Pola Kompleks</option>
+                        <option value="Madura — Pola Sederhana">Madura — Pola Sederhana</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                    </select>
+                </div>
+                <div class="gradio-column">
+                    <label class="gradio-label" for="budaya2">Budaya 2 <span class="hint">(opsional &mdash; kosong = 1 budaya)</span></label>
+                    <select id="budaya2" class="gradio-select">
+                        <option value="">&mdash; Kosong / 1 budaya saja &mdash;</option>
+                                                <option value="Jawa Barat">Jawa Barat</option>
+                        <option value="Jawa Tengah">Jawa Tengah</option>
+                        <option value="Jawa Timur">Jawa Timur</option>
+                        <option value="Madura — Klasik">Madura — Klasik</option>
+                        <option value="Madura — Pola Kompleks">Madura — Pola Kompleks</option>
+                        <option value="Madura — Pola Sederhana">Madura — Pola Sederhana</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="gradio-column">
+                <label class="gradio-label" for="promptInput">Prompt <span class="hint">(opsional, untuk filter tambahan)</span></label>
+                <textarea id="promptInput" class="gradio-textarea" rows="3"
+                          placeholder="mis. batik perpaduan madura jawa timur, latar navy gelap dengan floral sprigs dan vines yang saling terkait..."></textarea>
+            </div>
+        </section>
+
+        <!-- ============================== SECTION 2: TEMPLATE CAROUSEL ============================== -->
+        <section class="section section-template">
+            <header class="section-head">
+                <span class="section-num">2</span>
+                <div>
+                    <h2>Template</h2>
+                </div>
+            </header>
+
+            <div class="carousel-status" id="carouselStatus">
+                <span id="resultInfo">Menampilkan 10 template</span>
+            </div>
+
+            <div class="carousel-wrapper">
+                <button type="button" class="carousel-nav prev" id="carouselPrev" aria-label="Sebelumnya">&lsaquo;</button>
+                <div class="carousel" id="carousel">
+                    
+        <article class="carousel-item fusion-slide" id="card-fusion_yogyakarta_madura_pola_sederhana" data-id="fusion_yogyakarta_madura_pola_sederhana">
+            <div class="fusion-image">
+                <img src="images/fusion_yogyakarta_madura_pola_kompleks.png" alt="Fusion Yogyakarta × Madura — Pola Sederhana" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Yogyakarta</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Madura — Pola Sederhana</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Yogyakarta × Madura — Pola Sederhana</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a yogyakartabatik madura_pola_sederhanabatik batik pattern, Rich red fabric overlaid with a uniform grid of cream circular medallions, interspersed with bold golden-yellow floral sprigs and flowing vines.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_yogyakarta_madura_pola_sederhana">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_yogyakarta_madura_pola_kompleks" data-id="fusion_yogyakarta_madura_pola_kompleks">
+            <div class="fusion-image">
+                <img src="images/fusion_yogyakarta_madura.png" alt="Fusion Yogyakarta × Madura — Pola Kompleks" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Yogyakarta</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Madura — Pola Kompleks</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Yogyakarta × Madura — Pola Kompleks</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a yogyakartabatik madura_pola_kompleksbatik batik pattern, Deep red and green fabric with a dense grid of cream circular medallions, layered beneath vibrant floral sprigs, swirling leaves, and butterflies.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_yogyakarta_madura_pola_kompleks">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_yogyakarta_madura_klasik" data-id="fusion_yogyakarta_madura_klasik">
+            <div class="fusion-image">
+                <img src="images/fusion_yogyakarta_jawa_timur.png" alt="Fusion Yogyakarta × Madura — Klasik" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Yogyakarta</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Madura — Klasik</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Yogyakarta × Madura — Klasik</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a yogyakartabatik madurabatik batik pattern, Dark navy fabric with a uniform grid of cream circular medallions, accented by stylized floral sprigs, birds, and scattered white dot clusters.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_yogyakarta_madura_klasik">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_yogyakarta_jawa_timur" data-id="fusion_yogyakarta_jawa_timur">
+            <div class="fusion-image">
+                <img src="images/fusion_yogyakarta_jawa_tengah.png" alt="Fusion Yogyakarta × Jawa Timur" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Yogyakarta</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Jawa Timur</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Yogyakarta × Jawa Timur</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a yogyakartabatik jawa_timurbatik batik pattern, Dark background densely patterned with cream and gold circular medallions, interwoven with stylized tropical birds, bamboo stalks, and warm floral sprigs.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_yogyakarta_jawa_timur">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_yogyakarta_jawa_tengah" data-id="fusion_yogyakarta_jawa_tengah">
+            <div class="fusion-image">
+                <img src="images/fusion_yogyakarta_jawa_barat.png" alt="Fusion Yogyakarta × Jawa Tengah" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Yogyakarta</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Jawa Tengah</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Yogyakarta × Jawa Tengah</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a yogyakartabatik jawa_tengahbatik batik pattern, Dark brown fabric combining a uniform grid of cream circular medallions with flowing abstract swirls and small geometric accents in gold and beige.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_yogyakarta_jawa_tengah">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_yogyakarta_jawa_barat" data-id="fusion_yogyakarta_jawa_barat">
+            <div class="fusion-image">
+                <img src="images/fusion_madura_pola_sederhana_madura_pola_kompleks.png" alt="Fusion Yogyakarta × Jawa Barat" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Yogyakarta</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Jawa Barat</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Yogyakarta × Jawa Barat</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a yogyakartabatik jawa_baratbatik batik pattern, Deep navy fabric where a dense grid of cream circular medallions meets flowing gold cloud-like swirls, blending geometric precision with soft wave-like motion.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_yogyakarta_jawa_barat">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_madura_pola_sederhana_madura_pola_kompleks" data-id="fusion_madura_pola_sederhana_madura_pola_kompleks">
+            <div class="fusion-image">
+                <img src="images/fusion_madura_pola_sederhana_madura.png" alt="Fusion Madura — Pola Sederhana × Madura — Pola Kompleks" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Madura — Pola Sederhana</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Madura — Pola Kompleks</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Madura — Pola Sederhana × Madura — Pola Kompleks</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a madura_pola_sederhanabatik madura_pola_kompleksbatik batik pattern, Rich red fabric dense with bold golden-yellow floral sprigs and blossoms, layered beneath vibrant swirling leaves and butterflies in teal and orange.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_madura_pola_sederhana_madura_pola_kompleks">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_madura_pola_sederhana_madura_klasik" data-id="fusion_madura_pola_sederhana_madura_klasik">
+            <div class="fusion-image">
+                <img src="images/fusion_madura_pola_sederhana_jawa_timur.png" alt="Fusion Madura — Pola Sederhana × Madura — Klasik" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Madura — Pola Sederhana</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Madura — Klasik</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Madura — Pola Sederhana × Madura — Klasik</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a madura_pola_sederhanabatik madurabatik batik pattern, Dark navy fabric scattered with bold golden-yellow floral sprigs and blossoms, accented by cream stylized birds and clusters of small white dots.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_madura_pola_sederhana_madura_klasik">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_madura_pola_sederhana_jawa_timur" data-id="fusion_madura_pola_sederhana_jawa_timur">
+            <div class="fusion-image">
+                <img src="images/fusion_madura_pola_sederhana_jawa_tengah.png" alt="Fusion Madura — Pola Sederhana × Jawa Timur" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Madura — Pola Sederhana</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Jawa Timur</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Madura — Pola Sederhana × Jawa Timur</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a madura_pola_sederhanabatik jawa_timurbatik batik pattern, Rich red fabric dense with golden-yellow floral sprigs and flowing vines, interwoven with stylized tropical birds and slender bamboo stalks.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_madura_pola_sederhana_jawa_timur">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+<article class="carousel-item fusion-slide" id="card-fusion_madura_pola_sederhana_jawa_tengah" data-id="fusion_madura_pola_sederhana_jawa_tengah">
+            <div class="fusion-image">
+                <img src="images/fusion_madura_pola_sederhana_jawa_barat.png" alt="Fusion Madura — Pola Sederhana × Jawa Tengah" loading="lazy">
+            </div>
+            <div class="fusion-info">
+                <div class="fusion-region">
+                    <span class="region-tag region-1">Madura — Pola Sederhana</span>
+                    <span class="cross">x</span>
+                    <span class="region-tag region-2">Jawa Tengah</span>
+                </div>
+                <h3 class="fusion-judul">Fusion Madura — Pola Sederhana × Jawa Tengah</h3>
+                <div class="fusion-narrative">
+                    <h3 class="narrative-title">Narasi</h3>
+                    <p class="narrative-body" data-bind="filosofi_fusion"></p>
+                </div>
+                <div class="fusion-prompts">
+                    <h3 class="prompts-title">Prompt:</h3>
+                    <ul class="prompt-list">
+                        <li class="prompt-item">
+                            <code class="prompt-text">a madura_pola_sederhanabatik jawa_tengahbatik batik pattern, Dark brown fabric blending bold golden-yellow floral sprigs and blossoms with flowing abstract swirls and small geometric accents in cream.</code>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-pick" data-id="fusion_madura_pola_sederhana_jawa_tengah">Pilih Template Ini</button>
+            </div>
+        </article>
+
+
+            </div>
+                <button type="button" class="carousel-nav next" id="carouselNext" aria-label="Berikutnya">&rsaquo;</button>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots"></div>
+        </section>
+
+        <!-- ============================== SECTION 3: TERAPKAN KE BAJU ============================== -->
+        <section class="section section-apply">
+            <header class="section-head">
+                <span class="section-num">3</span>
+                <div>
+                    <h2>Terapkan ke Baju</h2>
+                    <p class="section-sub">Template yang dipilih akan diterapkan ke pola pakaian menggunakan segmentasi area pakaian (rembg u2net_cloth_seg).</p>
+                </div>
+            </header>
+            <div class="apply-panel">
+                <div class="apply-preview" id="applyPreview">
+                    <div class="apply-placeholder" id="applyPlaceholder">
+                        <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
+                        </svg>
+                        <p>Belum ada template dipilih</p>
+                        <small>Pilih template di atas untuk diterapkan ke baju</small>
+                    </div>
+                    <div class="apply-result" id="applyResult" hidden>
+                        <img id="applyImage" src="" alt="Template fusion">
+                        <div class="apply-overlay">
+                            <strong id="applyTitle"></strong>
+                            <span id="applyTriggers"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="apply-action">
+                    <button type="button" class="btn-apply" id="applyBtn" disabled>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        Terapkan ke Baju
+                    </button>
+                    <p class="apply-note" id="applyNote">
+                        Fitur ini akan aktif setelah template dipilih.
+                        Pada aplikasi Gradio interaktif, simulasi memakai segmentasi area
+                        pakaian (rembg u2net_cloth_seg) + Feathered Seams tiling.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="gradio-footer">
+        <p><b>SiButik</b> &mdash; Silang Budaya Batik &mdash; Generator Cultural Fusion Batik Nusantara</p>
+        <small>SDXL + LoRA Joint Training (kohya-ss) &mdash; demo statis, tanpa inference</small>
+    </footer>
+
+</div>
+
+<script>
+(function () {
+    // ====================== DATA ======================
+    const fusions = [{"id": "yogyakarta__madura", "budaya_1": "Yogyakarta", "budaya_2": "Madura — Pola Sederhana", "image": "images/fusion_yogyakarta_madura_pola_kompleks.png", "trigger_1": "yogyakartabatik", "trigger_2": "madura_pola_sederhanabatik", "judul": "Fusion Yogyakarta × Madura — Pola Sederhana", "subjudul": "Perpaduan budaya Yogyakarta dengan Madura — Pola Sederhana — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Yogyakarta", "pulau": "DI Yogyakarta, Jawa", "trigger": "yogyakartabatik", "warna": ["Biru", "Krem", "Cokelat tua", "Putih"], "motif": [], "filosofi": "Kepresisian geometris dan keteraturan — cerminan keanggunan keraton.", "pola": "", "elemen_utama": "Motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis."}, "ciri_daerah_2": {"nama": "Madura — Pola Sederhana", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_sederhanabatik", "warna": ["Merah tua", "Emas", "Kuning", "Merah"], "motif": [], "filosofi": "Keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat.", "pola": "", "elemen_utama": "Bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan."}, "filosofi_fusion": "Dari **Yogyakarta** diambil warna krem sebagai warna motif utama dan sentuhan bentuk melingkar pada beberapa kelopak bunga yang menyerupai medalion. Dari **Madura Pola Sederhana** diambil warna dasar merah tua dan motif bunga besar bergaya tegas dengan sulur daun keemasan. Pada hasil akhirnya, karakter Madura Pola Sederhana (bunga besar, dasar merah) tampil jauh lebih dominan dibanding grid medali...", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "yogyakarta madura — pola sederhana fusion yogyakarta × madura — pola sederhana perpaduan budaya yogyakarta dengan madura — pola sederhana — eksplorasi joint lora sdxl yogyakartabatik madura_pola_sederhanabatik dari **yogyakarta** diambil warna krem sebagai warna motif utama dan sentuhan bentuk melingkar pada beberapa kelopak bunga yang menyerupai medalion. dari **madura pola sederhana** diambil warna dasar merah tua dan motif bunga besar bergaya tegas dengan sulur daun keemasan. pada hasil akhirnya, karakter madura pola sederhana (bunga besar, dasar merah) tampil jauh lebih dominan dibanding grid medali... pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara yogyakarta di yogyakarta, jawa kepresisian geometris dan keteraturan — cerminan keanggunan keraton. motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis.  madura — pola sederhana pulau madura, jawa timur keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat. bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan.  biru krem cokelat tua putih merah tua emas kuning merah"},{"id": "yogyakarta__madura", "budaya_1": "Yogyakarta", "budaya_2": "Madura — Pola Kompleks", "image": "images/fusion_yogyakarta_madura.png", "trigger_1": "yogyakartabatik", "trigger_2": "madura_pola_kompleksbatik", "judul": "Fusion Yogyakarta × Madura — Pola Kompleks", "subjudul": "Perpaduan budaya Yogyakarta dengan Madura — Pola Kompleks — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Yogyakarta", "pulau": "DI Yogyakarta, Jawa", "trigger": "yogyakartabatik", "warna": ["Biru", "Krem", "Cokelat tua", "Putih"], "motif": [], "filosofi": "Kepresisian geometris dan keteraturan — cerminan keanggunan keraton.", "pola": "", "elemen_utama": "Motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis."}, "ciri_daerah_2": {"nama": "Madura — Pola Kompleks", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_kompleksbatik", "warna": ["Merah", "Hijau", "Pink", "Kuning", "Oranye"], "motif": [], "filosofi": "Kemewahan, keuletan, dan keyakinan — setiap detail adalah pernyataan.", "pola": "", "elemen_utama": "Bunga, dedaunan, dan kupu-kupu sangat padat dan berlapis, kesan \"maximalist\" sangat berwarna."}, "filosofi_fusion": "Dari **Yogyakarta** diambil pola titik-titik/isian bulat kecil yang tersebar rapat sebagai lapisan latar, menggantikan grid medalion besar dengan taburan titik halus. Dari **Madura Pola Kompleks** diambil kepadatan penuh motif bunga, sulur daun, dan kupu-kupu warna-warni yang menjadi lapisan utama di atasnya. Hasilnya sesuai arahan prompt \"layered beneath vibrant floral sprigs\" — motif Madura Pola...", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "yogyakarta madura — pola kompleks fusion yogyakarta × madura — pola kompleks perpaduan budaya yogyakarta dengan madura — pola kompleks — eksplorasi joint lora sdxl yogyakartabatik madura_pola_kompleksbatik dari **yogyakarta** diambil pola titik-titik/isian bulat kecil yang tersebar rapat sebagai lapisan latar, menggantikan grid medalion besar dengan taburan titik halus. dari **madura pola kompleks** diambil kepadatan penuh motif bunga, sulur daun, dan kupu-kupu warna-warni yang menjadi lapisan utama di atasnya. hasilnya sesuai arahan prompt \"layered beneath vibrant floral sprigs\" — motif madura pola... pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara yogyakarta di yogyakarta, jawa kepresisian geometris dan keteraturan — cerminan keanggunan keraton. motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis.  madura — pola kompleks pulau madura, jawa timur kemewahan, keuletan, dan keyakinan — setiap detail adalah pernyataan. bunga, dedaunan, dan kupu-kupu sangat padat dan berlapis, kesan \"maximalist\" sangat berwarna.  biru krem cokelat tua putih merah hijau pink kuning oranye"},{"id": "yogyakarta__madura", "budaya_1": "Yogyakarta", "budaya_2": "Madura — Klasik", "image": "images/fusion_yogyakarta_jawa_timur.png", "trigger_1": "yogyakartabatik", "trigger_2": "madurabatik", "judul": "Fusion Yogyakarta × Madura — Klasik", "subjudul": "Perpaduan budaya Yogyakarta dengan Madura — Klasik — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Yogyakarta", "pulau": "DI Yogyakarta, Jawa", "trigger": "yogyakartabatik", "warna": ["Biru", "Krem", "Cokelat tua", "Putih"], "motif": [], "filosofi": "Kepresisian geometris dan keteraturan — cerminan keanggunan keraton.", "pola": "", "elemen_utama": "Motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis."}, "ciri_daerah_2": {"nama": "Madura — Klasik", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madurabatik", "warna": ["Merah tua", "Navy gelap", "Krem", "Putih"], "motif": [], "filosofi": "Ketegasan, keberanian, dan kemandirian dengan motif klasik yang elegan.", "pola": "", "elemen_utama": "Bunga/sulur berskala sedang dipadukan taburan titik-titik putih kecil (isen-isen) yang tersebar merata."}, "filosofi_fusion": "Dari **Yogyakarta** diambil dasar biru navy gelap dan taburan titik-titik kecil rapat yang mengisi seluruh latar layaknya grid medalion. Dari **Madura Klasik** diambil motif bunga krem bergaya sulur serta sebaran titik putih (isen-isen) khasnya. Perpaduan ini terlihat jelas pada gambar: bunga-bunga krem tersebar di atas latar navy yang dipenuhi titik-titik kecil keemasan, memadukan kerapatan Yogya...", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "yogyakarta madura — klasik fusion yogyakarta × madura — klasik perpaduan budaya yogyakarta dengan madura — klasik — eksplorasi joint lora sdxl yogyakartabatik madurabatik dari **yogyakarta** diambil dasar biru navy gelap dan taburan titik-titik kecil rapat yang mengisi seluruh latar layaknya grid medalion. dari **madura klasik** diambil motif bunga krem bergaya sulur serta sebaran titik putih (isen-isen) khasnya. perpaduan ini terlihat jelas pada gambar: bunga-bunga krem tersebar di atas latar navy yang dipenuhi titik-titik kecil keemasan, memadukan kerapatan yogya... pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara yogyakarta di yogyakarta, jawa kepresisian geometris dan keteraturan — cerminan keanggunan keraton. motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis.  madura — klasik pulau madura, jawa timur ketegasan, keberanian, dan kemandirian dengan motif klasik yang elegan. bunga/sulur berskala sedang dipadukan taburan titik-titik putih kecil (isen-isen) yang tersebar merata.  biru krem cokelat tua putih merah tua navy gelap krem putih"},{"id": "yogyakarta__jawa timur", "budaya_1": "Yogyakarta", "budaya_2": "Jawa Timur", "image": "images/fusion_yogyakarta_jawa_tengah.png", "trigger_1": "yogyakartabatik", "trigger_2": "jawa_timurbatik", "judul": "Fusion Yogyakarta × Jawa Timur", "subjudul": "Perpaduan budaya Yogyakarta dengan Jawa Timur — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Yogyakarta", "pulau": "DI Yogyakarta, Jawa", "trigger": "yogyakartabatik", "warna": ["Biru", "Krem", "Cokelat tua", "Putih"], "motif": [], "filosofi": "Kepresisian geometris dan keteraturan — cerminan keanggunan keraton.", "pola": "", "elemen_utama": "Motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis."}, "ciri_daerah_2": {"nama": "Jawa Timur", "pulau": "Jawa Timur", "trigger": "jawa_timurbatik", "warna": ["Navy gelap", "Emas", "Hijau", "Oranye"], "motif": [], "filosofi": "Semangat juang, kehidupan yang dinamis, dan harmoni dengan alam.", "pola": "", "elemen_utama": "Flora-fauna naturalis-dekoratif — burung/unggas stilisasi dipadu sulur bunga dan dedaunan mengalir dinamis."}, "filosofi_fusion": "Dari **Yogyakarta** seharusnya diambil taburan medalion bulat krem-emas sebagai pengisi latar. Dari **Jawa Timur** diambil motif burung tropis bergaya emas dan sulur daun mengalir yang menjadi elemen dominan. Pada gambar, unsur burung dan sulur khas Jawa Timur tampil sangat kuat sebagai motif utama, sementara pola medalion Yogyakarta lebih tersamar menjadi bentuk bulatan kecil di sela-sela sulur.", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "yogyakarta jawa timur fusion yogyakarta × jawa timur perpaduan budaya yogyakarta dengan jawa timur — eksplorasi joint lora sdxl yogyakartabatik jawa_timurbatik dari **yogyakarta** seharusnya diambil taburan medalion bulat krem-emas sebagai pengisi latar. dari **jawa timur** diambil motif burung tropis bergaya emas dan sulur daun mengalir yang menjadi elemen dominan. pada gambar, unsur burung dan sulur khas jawa timur tampil sangat kuat sebagai motif utama, sementara pola medalion yogyakarta lebih tersamar menjadi bentuk bulatan kecil di sela-sela sulur. pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara yogyakarta di yogyakarta, jawa kepresisian geometris dan keteraturan — cerminan keanggunan keraton. motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis.  jawa timur jawa timur semangat juang, kehidupan yang dinamis, dan harmoni dengan alam. flora-fauna naturalis-dekoratif — burung/unggas stilisasi dipadu sulur bunga dan dedaunan mengalir dinamis.  biru krem cokelat tua putih navy gelap emas hijau oranye"},{"id": "yogyakarta__jawa tengah", "budaya_1": "Yogyakarta", "budaya_2": "Jawa Tengah", "image": "images/fusion_yogyakarta_jawa_barat.png", "trigger_1": "yogyakartabatik", "trigger_2": "jawa_tengahbatik", "judul": "Fusion Yogyakarta × Jawa Tengah", "subjudul": "Perpaduan budaya Yogyakarta dengan Jawa Tengah — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Yogyakarta", "pulau": "DI Yogyakarta, Jawa", "trigger": "yogyakartabatik", "warna": ["Biru", "Krem", "Cokelat tua", "Putih"], "motif": [], "filosofi": "Kepresisian geometris dan keteraturan — cerminan keanggunan keraton.", "pola": "", "elemen_utama": "Motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis."}, "ciri_daerah_2": {"nama": "Jawa Tengah", "pulau": "Jawa Tengah", "trigger": "jawa_tengahbatik", "warna": ["Cokelat soga", "Putih", "Biru indigo", "Emas"], "motif": [], "filosofi": "Keharmonisan, kesabaran, dan keseimbangan hidup.", "pola": "", "elemen_utama": "Geometris-abstrak berulang, condong garis diagonal dan bentuk oval/daun tersusun rapi berbaris — bukan floral naturalis."}, "filosofi_fusion": "Dari **Yogyakarta** diambil bentuk bulat/oval (medalion) yang disusun berulang rapat sebagai motif utama. Dari **Jawa Tengah** diambil warna dasar cokelat gelap serta kesan pola geometris-abstrak yang tersusun rapi khas daerah tersebut. Perpaduan ini menghasilkan taburan bentuk oval krem menyerupai kelopak/tetesan yang tersusun rapat di atas latar cokelat tua — perpaduan paling seimbang di antara ...", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "yogyakarta jawa tengah fusion yogyakarta × jawa tengah perpaduan budaya yogyakarta dengan jawa tengah — eksplorasi joint lora sdxl yogyakartabatik jawa_tengahbatik dari **yogyakarta** diambil bentuk bulat/oval (medalion) yang disusun berulang rapat sebagai motif utama. dari **jawa tengah** diambil warna dasar cokelat gelap serta kesan pola geometris-abstrak yang tersusun rapi khas daerah tersebut. perpaduan ini menghasilkan taburan bentuk oval krem menyerupai kelopak/tetesan yang tersusun rapat di atas latar cokelat tua — perpaduan paling seimbang di antara ... pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara yogyakarta di yogyakarta, jawa kepresisian geometris dan keteraturan — cerminan keanggunan keraton. motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis.  jawa tengah jawa tengah keharmonisan, kesabaran, dan keseimbangan hidup. geometris-abstrak berulang, condong garis diagonal dan bentuk oval/daun tersusun rapi berbaris — bukan floral naturalis.  biru krem cokelat tua putih cokelat soga putih biru indigo emas"},{"id": "yogyakarta__jawa barat", "budaya_1": "Yogyakarta", "budaya_2": "Jawa Barat", "image": "images/fusion_madura_pola_sederhana_madura_pola_kompleks.png", "trigger_1": "yogyakartabatik", "trigger_2": "jawa_baratbatik", "judul": "Fusion Yogyakarta × Jawa Barat", "subjudul": "Perpaduan budaya Yogyakarta dengan Jawa Barat — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Yogyakarta", "pulau": "DI Yogyakarta, Jawa", "trigger": "yogyakartabatik", "warna": ["Biru", "Krem", "Cokelat tua", "Putih"], "motif": [], "filosofi": "Kepresisian geometris dan keteraturan — cerminan keanggunan keraton.", "pola": "", "elemen_utama": "Motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis."}, "ciri_daerah_2": {"nama": "Jawa Barat", "pulau": "Jawa Barat", "trigger": "jawa_baratbatik", "warna": ["Navy dalam", "Emas", "Biru", "Putih"], "motif": [], "filosofi": "Keharmonisan dengan alam, leluhur, dan spiritualitas.", "pola": "", "elemen_utama": "Awan bergulung (mega mendung) — lengkungan awan saling tumpang tindih dan mengalir menutupi seluruh kain."}, "filosofi_fusion": "Dari **Yogyakarta** seharusnya diambil grid medalion bulat krem yang presisi. Dari **Jawa Barat** diambil motif awan mega mendung berwarna emas yang mengalir dan bergelombang di atas dasar navy. Pada hasil gambar, motif awan Jawa Barat mendominasi secara visual sebagai gulungan-gulungan emas yang mengalir, sementara unsur medalion Yogyakarta lebih tersamar menjadi lengkungan-lengkungan kecil di an...", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "yogyakarta jawa barat fusion yogyakarta × jawa barat perpaduan budaya yogyakarta dengan jawa barat — eksplorasi joint lora sdxl yogyakartabatik jawa_baratbatik dari **yogyakarta** seharusnya diambil grid medalion bulat krem yang presisi. dari **jawa barat** diambil motif awan mega mendung berwarna emas yang mengalir dan bergelombang di atas dasar navy. pada hasil gambar, motif awan jawa barat mendominasi secara visual sebagai gulungan-gulungan emas yang mengalir, sementara unsur medalion yogyakarta lebih tersamar menjadi lengkungan-lengkungan kecil di an... pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara yogyakarta di yogyakarta, jawa kepresisian geometris dan keteraturan — cerminan keanggunan keraton. motif geometris bulatan/medalion rapat ber-grid, nyaris tanpa unsur floral naturalis.  jawa barat jawa barat keharmonisan dengan alam, leluhur, dan spiritualitas. awan bergulung (mega mendung) — lengkungan awan saling tumpang tindih dan mengalir menutupi seluruh kain.  biru krem cokelat tua putih navy dalam emas biru putih"},{"id": "madura__madura", "budaya_1": "Madura — Pola Sederhana", "budaya_2": "Madura — Pola Kompleks", "image": "images/fusion_madura_pola_sederhana_madura.png", "trigger_1": "madura_pola_sederhanabatik", "trigger_2": "madura_pola_kompleksbatik", "judul": "Fusion Madura — Pola Sederhana × Madura — Pola Kompleks", "subjudul": "Perpaduan budaya Madura — Pola Sederhana dengan Madura — Pola Kompleks — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Madura — Pola Sederhana", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_sederhanabatik", "warna": ["Merah tua", "Emas", "Kuning", "Merah"], "motif": [], "filosofi": "Keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat.", "pola": "", "elemen_utama": "Bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan."}, "ciri_daerah_2": {"nama": "Madura — Pola Kompleks", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_kompleksbatik", "warna": ["Merah", "Hijau", "Pink", "Kuning", "Oranye"], "motif": [], "filosofi": "Kemewahan, keuletan, dan keyakinan — setiap detail adalah pernyataan.", "pola": "", "elemen_utama": "Bunga, dedaunan, dan kupu-kupu sangat padat dan berlapis, kesan \"maximalist\" sangat berwarna."}, "filosofi_fusion": "Dari **Madura Pola Sederhana** diambil warna dasar merah tua dan bentuk bunga besar berwarna emas-kuning yang tegas. Dari **Madura Pola Kompleks** diambil kepadatan lapisan motif — sulur daun berayun dan aksen warna teal/oranye yang menambah variasi warna. Hasilnya adalah kain merah yang penuh dengan bunga besar keemasan berpadu bunga-bunga teal/krem yang lebih rapat, terlihat lebih ramai dibandin...", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "madura — pola sederhana madura — pola kompleks fusion madura — pola sederhana × madura — pola kompleks perpaduan budaya madura — pola sederhana dengan madura — pola kompleks — eksplorasi joint lora sdxl madura_pola_sederhanabatik madura_pola_kompleksbatik dari **madura pola sederhana** diambil warna dasar merah tua dan bentuk bunga besar berwarna emas-kuning yang tegas. dari **madura pola kompleks** diambil kepadatan lapisan motif — sulur daun berayun dan aksen warna teal/oranye yang menambah variasi warna. hasilnya adalah kain merah yang penuh dengan bunga besar keemasan berpadu bunga-bunga teal/krem yang lebih rapat, terlihat lebih ramai dibandin... pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara madura — pola sederhana pulau madura, jawa timur keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat. bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan.  madura — pola kompleks pulau madura, jawa timur kemewahan, keuletan, dan keyakinan — setiap detail adalah pernyataan. bunga, dedaunan, dan kupu-kupu sangat padat dan berlapis, kesan \"maximalist\" sangat berwarna.  merah tua emas kuning merah merah hijau pink kuning oranye"},{"id": "madura — pola sederhana__madura", "budaya_1": "Madura — Pola Sederhana", "budaya_2": "Madura — Klasik", "image": "images/fusion_madura_pola_sederhana_jawa_timur.png", "trigger_1": "madura_pola_sederhanabatik", "trigger_2": "madurabatik", "judul": "Fusion Madura — Pola Sederhana × Madura — Klasik", "subjudul": "Perpaduan budaya Madura — Pola Sederhana dengan Madura — Klasik — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Madura — Pola Sederhana", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_sederhanabatik", "warna": ["Merah tua", "Emas", "Kuning", "Merah"], "motif": [], "filosofi": "Keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat.", "pola": "", "elemen_utama": "Bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan."}, "ciri_daerah_2": {"nama": "Madura — Klasik", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madurabatik", "warna": ["Merah tua", "Navy gelap", "Krem", "Putih"], "motif": [], "filosofi": "Ketegasan, keberanian, dan kemandirian dengan motif klasik yang elegan.", "pola": "", "elemen_utama": "Bunga/sulur berskala sedang dipadukan taburan titik-titik putih kecil (isen-isen) yang tersebar merata."}, "filosofi_fusion": "Dari **Madura Pola Sederhana** diambil motif bunga besar berwarna emas-kuning yang tegas dan mencolok. Dari **Madura Klasik** diambil dasar warna navy gelap serta taburan titik-titik putih kecil (isen-isen) khasnya. Kombinasi ini tampak sebagai bunga-bunga besar keemasan yang mengisi latar navy bertabur titik-titik halus di sela-sela motif utamanya.", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "madura — pola sederhana madura — klasik fusion madura — pola sederhana × madura — klasik perpaduan budaya madura — pola sederhana dengan madura — klasik — eksplorasi joint lora sdxl madura_pola_sederhanabatik madurabatik dari **madura pola sederhana** diambil motif bunga besar berwarna emas-kuning yang tegas dan mencolok. dari **madura klasik** diambil dasar warna navy gelap serta taburan titik-titik putih kecil (isen-isen) khasnya. kombinasi ini tampak sebagai bunga-bunga besar keemasan yang mengisi latar navy bertabur titik-titik halus di sela-sela motif utamanya. pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara madura — pola sederhana pulau madura, jawa timur keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat. bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan.  madura — klasik pulau madura, jawa timur ketegasan, keberanian, dan kemandirian dengan motif klasik yang elegan. bunga/sulur berskala sedang dipadukan taburan titik-titik putih kecil (isen-isen) yang tersebar merata.  merah tua emas kuning merah merah tua navy gelap krem putih"},{"id": "madura__jawa timur", "budaya_1": "Madura — Pola Sederhana", "budaya_2": "Jawa Timur", "image": "images/fusion_madura_pola_sederhana_jawa_tengah.png", "trigger_1": "madura_pola_sederhanabatik", "trigger_2": "jawa_timurbatik", "judul": "Fusion Madura — Pola Sederhana × Jawa Timur", "subjudul": "Perpaduan budaya Madura — Pola Sederhana dengan Jawa Timur — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Madura — Pola Sederhana", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_sederhanabatik", "warna": ["Merah tua", "Emas", "Kuning", "Merah"], "motif": [], "filosofi": "Keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat.", "pola": "", "elemen_utama": "Bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan."}, "ciri_daerah_2": {"nama": "Jawa Timur", "pulau": "Jawa Timur", "trigger": "jawa_timurbatik", "warna": ["Navy gelap", "Emas", "Hijau", "Oranye"], "motif": [], "filosofi": "Semangat juang, kehidupan yang dinamis, dan harmoni dengan alam.", "pola": "", "elemen_utama": "Flora-fauna naturalis-dekoratif — burung/unggas stilisasi dipadu sulur bunga dan dedaunan mengalir dinamis."}, "filosofi_fusion": "Dari **Madura Pola Sederhana** diambil warna dasar merah tua dan bunga besar keemasan yang tegas. Dari **Jawa Timur** diambil sulur daun panjang mengalir serta siluet menyerupai burung/bambu yang khas gaya tropisnya. Terlihat pada bentuk daun ramping yang menjuntai di sela-sela bunga besar, memadukan ketegasan bunga Madura dengan kelenturan sulur Jawa Timur.", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "madura — pola sederhana jawa timur fusion madura — pola sederhana × jawa timur perpaduan budaya madura — pola sederhana dengan jawa timur — eksplorasi joint lora sdxl madura_pola_sederhanabatik jawa_timurbatik dari **madura pola sederhana** diambil warna dasar merah tua dan bunga besar keemasan yang tegas. dari **jawa timur** diambil sulur daun panjang mengalir serta siluet menyerupai burung/bambu yang khas gaya tropisnya. terlihat pada bentuk daun ramping yang menjuntai di sela-sela bunga besar, memadukan ketegasan bunga madura dengan kelenturan sulur jawa timur. pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara madura — pola sederhana pulau madura, jawa timur keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat. bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan.  jawa timur jawa timur semangat juang, kehidupan yang dinamis, dan harmoni dengan alam. flora-fauna naturalis-dekoratif — burung/unggas stilisasi dipadu sulur bunga dan dedaunan mengalir dinamis.  merah tua emas kuning merah navy gelap emas hijau oranye"},{"id": "madura__jawa tengah", "budaya_1": "Madura — Pola Sederhana", "budaya_2": "Jawa Tengah", "image": "images/fusion_madura_pola_sederhana_jawa_barat.png", "trigger_1": "madura_pola_sederhanabatik", "trigger_2": "jawa_tengahbatik", "judul": "Fusion Madura — Pola Sederhana × Jawa Tengah", "subjudul": "Perpaduan budaya Madura — Pola Sederhana dengan Jawa Tengah — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Madura — Pola Sederhana", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_sederhanabatik", "warna": ["Merah tua", "Emas", "Kuning", "Merah"], "motif": [], "filosofi": "Keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat.", "pola": "", "elemen_utama": "Bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan."}, "ciri_daerah_2": {"nama": "Jawa Tengah", "pulau": "Jawa Tengah", "trigger": "jawa_tengahbatik", "warna": ["Cokelat soga", "Putih", "Biru indigo", "Emas"], "motif": [], "filosofi": "Keharmonisan, kesabaran, dan keseimbangan hidup.", "pola": "", "elemen_utama": "Geometris-abstrak berulang, condong garis diagonal dan bentuk oval/daun tersusun rapi berbaris — bukan floral naturalis."}, "filosofi_fusion": "Dari **Madura Pola Sederhana** diambil motif bunga besar berwarna emas-kuning yang mencolok sebagai elemen utama. Dari **Jawa Tengah** diambil warna dasar cokelat tua serta tekstur latar geometris-abstrak halus. Pada gambar, tekstur kotak-kotak kecil khas Jawa Tengah terlihat samar di balik bunga-bunga besar keemasan Madura, menjadi \"kanvas\" bagi motif utamanya.", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "madura — pola sederhana jawa tengah fusion madura — pola sederhana × jawa tengah perpaduan budaya madura — pola sederhana dengan jawa tengah — eksplorasi joint lora sdxl madura_pola_sederhanabatik jawa_tengahbatik dari **madura pola sederhana** diambil motif bunga besar berwarna emas-kuning yang mencolok sebagai elemen utama. dari **jawa tengah** diambil warna dasar cokelat tua serta tekstur latar geometris-abstrak halus. pada gambar, tekstur kotak-kotak kecil khas jawa tengah terlihat samar di balik bunga-bunga besar keemasan madura, menjadi \"kanvas\" bagi motif utamanya. pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara madura — pola sederhana pulau madura, jawa timur keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat. bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan.  jawa tengah jawa tengah keharmonisan, kesabaran, dan keseimbangan hidup. geometris-abstrak berulang, condong garis diagonal dan bentuk oval/daun tersusun rapi berbaris — bukan floral naturalis.  merah tua emas kuning merah cokelat soga putih biru indigo emas"},{"id": "madura__jawa barat", "budaya_1": "Madura — Pola Sederhana", "budaya_2": "Jawa Barat", "image": "images/fusion_madura_pola_kompleks_madura.png", "trigger_1": "madura_pola_sederhanabatik", "trigger_2": "jawa_baratbatik", "judul": "Fusion Madura — Pola Sederhana × Jawa Barat", "subjudul": "Perpaduan budaya Madura — Pola Sederhana dengan Jawa Barat — eksplorasi joint LoRA SDXL", "ciri_daerah_1": {"nama": "Madura — Pola Sederhana", "pulau": "Pulau Madura, Jawa Timur", "trigger": "madura_pola_sederhanabatik", "warna": ["Merah tua", "Emas", "Kuning", "Merah"], "motif": [], "filosofi": "Keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat.", "pola": "", "elemen_utama": "Bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan."}, "ciri_daerah_2": {"nama": "Jawa Barat", "pulau": "Jawa Barat", "trigger": "jawa_baratbatik", "warna": ["Navy dalam", "Emas", "Biru", "Putih"], "motif": [], "filosofi": "Keharmonisan dengan alam, leluhur, dan spiritualitas.", "pola": "", "elemen_utama": "Awan bergulung (mega mendung) — lengkungan awan saling tumpang tindih dan mengalir menutupi seluruh kain."}, "filosofi_fusion": "Dari **Madura Pola Sederhana** diambil bunga besar berwarna emas-kuning dengan sulur daun tegas. Dari **Jawa Barat** diambil dasar navy gelap serta kesan alur melengkung mengalir khas motif mega mendung yang berpadu dengan sulur bunga. Hasilnya berupa komposisi emas kontras tinggi di atas latar biru tua, dengan sulur daun yang melengkung menyerupai alur awan meski bentuk kelopak bunga Madura tetap...", "penggunaan": "Pakaian adat, eksplorasi motif fashion, dan pelestarian budaya.", "tema_prompt": "harmoni budaya nusantara", "search_blob": "madura — pola sederhana jawa barat fusion madura — pola sederhana × jawa barat perpaduan budaya madura — pola sederhana dengan jawa barat — eksplorasi joint lora sdxl madura_pola_sederhanabatik jawa_baratbatik dari **madura pola sederhana** diambil bunga besar berwarna emas-kuning dengan sulur daun tegas. dari **jawa barat** diambil dasar navy gelap serta kesan alur melengkung mengalir khas motif mega mendung yang berpadu dengan sulur bunga. hasilnya berupa komposisi emas kontras tinggi di atas latar biru tua, dengan sulur daun yang melengkung menyerupai alur awan meski bentuk kelopak bunga madura tetap... pakaian adat, eksplorasi motif fashion, dan pelestarian budaya. harmoni budaya nusantara madura — pola sederhana pulau madura, jawa timur keberanian, ketegasan, dan semangat juang dalam motif sederhana yang kuat. bunga besar (bold floral sprigs) bergaya tegas dengan garis kontur keemasan.  jawa barat jawa barat keharmonisan dengan alam, leluhur, dan spiritualitas. awan bergulung (mega mendung) — lengkungan awan saling tumpang tindih dan mengalir menutupi seluruh kain.  merah tua emas kuning merah navy dalam emas biru putih"}];
+
+    // ====================== FILTER LOGIC ======================
+    const budaya1Sel = document.getElementById('budaya1');
+    const budaya2Sel = document.getElementById('budaya2');
+    const promptInput = document.getElementById('promptInput');
+    const resultInfo = document.getElementById('resultInfo');
+
+    function tokenize(s) {
+        return (s || '').toLowerCase()
+            .replace(/[{}()'"`~!@#$%^&*+=:;,.<>/?\|_-]/g, ' ')
+            .split(/\s+/)
+            .filter(function (t) {
+                return t.length >= 2
+                    && !/^(?:triggers|class_name|class|pattern|fabric|batik|style|textile|design|motif|color|colour|background|composition)$/i.test(t);
+            });
+    }
+
+    function getFilteredAndScored() {
+        const b1 = budaya1Sel.value;
+        const b2 = budaya2Sel.value;
+        const promptTokens = tokenize(promptInput.value);
+
+        const items = fusions.map(function (f) {
+            const blob = (f.search_blob || '');
+            let score = 0;
+            let matched = true;
+
+            // Filter budaya 1
+            if (b1) {
+                if (f.budaya_1 !== b1 && f.budaya_2 !== b1) matched = false;
+                else score += 5;
+            }
+
+            // Filter budaya 2 (kalau dipilih)
+            if (b2) {
+                if (f.budaya_1 !== b2 && f.budaya_2 !== b2) matched = false;
+                else score += 5;
+            }
+
+            // Prompt keywords (OR scoring)
+            promptTokens.forEach(function (t) {
+                if (blob.indexOf(t) !== -1) {
+                    score += 1;
+                } else {
+                    // token tidak match = penalty kecil (bukan deal-breaker)
+                    score -= 0.5;
+                }
+            });
+
+            return { fusion: f, score: score, matched: matched };
+        })
+        .filter(function (x) { return x.matched; })
+        .sort(function (a, b) { return b.score - a.score; });
+
+        return items.map(function (x) { return x.fusion; });
+    }
+
+    // ====================== CAROUSEL ======================
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsBox = document.getElementById('carouselDots');
+    const cardsAll = Array.from(document.querySelectorAll('.carousel-item'));
+    let currentIndex = 0;
+
+    function getVisibleCards() {
+        return cardsAll.filter(function (c) {
+            return !c.classList.contains('is-hidden')
+                && !c.classList.contains('is-filtered');
+        });
+    }
+
+    function updateCarousel() {
+        const visible = getVisibleCards();
+
+        // Hide cards yang ke-filter; sisakan yang visible
+        cardsAll.forEach(function (c) {
+            const shouldShow = !c.classList.contains('is-filtered');
+            c.classList.toggle('is-hidden', !shouldShow);
+        });
+
+        // Update info
+        if (visible.length === 0) {
+            resultInfo.textContent = 'Tidak ada template yang cocok dengan filter.';
+            prevBtn.disabled = true;
+            nextBtn.disabled = true;
+        } else {
+            resultInfo.textContent = 'Menampilkan ' + visible.length + ' template';
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
+        }
+
+        // Update dots
+        dotsBox.innerHTML = visible.map(function (_, i) {
+            return '<button type="button" class="dot" data-i="' + i + '" aria-label="Template ' + (i + 1) + '"></button>';
+        }).join('');
+        Array.from(dotsBox.querySelectorAll('.dot')).forEach(function (d) {
+            d.addEventListener('click', function () {
+                scrollToIndex(parseInt(d.dataset.i, 10));
+            });
+        });
+
+        currentIndex = 0;
+        updateDotsHighlight();
+    }
+
+    function scrollToIndex(i) {
+        const visible = getVisibleCards();
+        if (i < 0) i = 0;
+        if (i >= visible.length) i = visible.length - 1;
+        currentIndex = i;
+        const card = visible[i];
+        if (card) {
+            // Hitung offset relatif terhadap scroll container
+            const cardLeft = card.offsetLeft;
+            const carouselPadding = parseFloat(getComputedStyle(carousel).paddingLeft) || 0;
+            const target = cardLeft - carouselPadding;
+            carousel.scrollTo({ left: target, behavior: 'smooth' });
+        }
+        updateDotsHighlight();
+    }
+
+    function updateDotsHighlight() {
+        Array.from(dotsBox.querySelectorAll('.dot')).forEach(function (d, idx) {
+            d.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    prevBtn.addEventListener('click', function () { scrollToIndex(currentIndex - 1); });
+    nextBtn.addEventListener('click', function () { scrollToIndex(currentIndex + 1); });
+
+    // Horizontal scroll dengan mouse wheel
+    carousel.addEventListener('wheel', function (e) {
+        // Hanya intercept vertical wheel (deltaY) dan ubah jadi horizontal scroll
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            e.preventDefault();
+            carousel.scrollLeft += e.deltaY;
+        }
+    }, { passive: false });
+
+    // Update currentIndex berdasarkan scroll position
+    let scrollTimer = null;
+    carousel.addEventListener('scroll', function () {
+        if (scrollTimer) clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function () {
+            const visible = getVisibleCards();
+            const carouselRect = carousel.getBoundingClientRect();
+            let nearest = 0;
+            let nearestDist = Infinity;
+            visible.forEach(function (c, i) {
+                const r = c.getBoundingClientRect();
+                const dist = Math.abs(r.left - carouselRect.left);
+                if (dist < nearestDist) { nearestDist = dist; nearest = i; }
+            });
+            currentIndex = nearest;
+            updateDotsHighlight();
+        }, 80);
+    });
+
+    // Keyboard navigation saat carousel focus
+    carousel.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); scrollToIndex(currentIndex - 1); }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); scrollToIndex(currentIndex + 1); }
+    });
+
+    // ====================== FILTER EVENTS ======================
+    function applyFilters() {
+        // Simpan data blob ke dataset kalau belum
+        cardsAll.forEach(function (c) {
+            if (!c.dataset.search) {
+                // cari blob dari fusions
+                const id = c.dataset.id;
+                const f = fusions.find(function (x) { return x.id === id; });
+                if (f) c.dataset.search = f.search_blob;
+            }
+        });
+
+        const b1 = budaya1Sel.value;
+        const b2 = budaya2Sel.value;
+        const promptTokens = tokenize(promptInput.value);
+
+        cardsAll.forEach(function (card) {
+            const f = fusions.find(function (x) { return x.id === card.dataset.id; });
+            if (!f) return;
+            let visible = true;
+            if (b1 && f.budaya_1 !== b1 && f.budaya_2 !== b1) visible = false;
+            if (b2 && f.budaya_1 !== b2 && f.budaya_2 !== b2) visible = false;
+            // prompt: tampilkan kalau ada token match, atau kalau prompt kosong
+            if (promptTokens.length > 0 && visible) {
+                const blob = f.search_blob || '';
+                const anyMatch = promptTokens.some(function (t) { return blob.indexOf(t) !== -1; });
+                if (!anyMatch) visible = false;
+            }
+            card.classList.toggle('is-filtered', !visible);
+        });
+
+        updateCarousel();
+    }
+
+    budaya1Sel.addEventListener('change', applyFilters);
+    budaya2Sel.addEventListener('change', applyFilters);
+    promptInput.addEventListener('input', applyFilters);
+
+    // ====================== PICK & APPLY ======================
+    const applyBtn = document.getElementById('applyBtn');
+    const applyPlaceholder = document.getElementById('applyPlaceholder');
+    const applyResult = document.getElementById('applyResult');
+    const applyImage = document.getElementById('applyImage');
+    const applyTitle = document.getElementById('applyTitle');
+    const applyTriggers = document.getElementById('applyTriggers');
+    const applyNote = document.getElementById('applyNote');
+    let selectedFusion = null;
+
+    document.querySelectorAll('.btn-pick').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            const id = btn.dataset.id;
+            selectedFusion = fusions.find(function (f) { return f.id === id; });
+            if (!selectedFusion) return;
+
+            // Highlight picked card
+            cardsAll.forEach(function (c) { c.classList.remove('is-picked'); });
+            const card = document.getElementById('card-' + id);
+            if (card) card.classList.add('is-picked');
+
+            // Update apply section
+            applyImage.src = selectedFusion.image;
+            applyImage.alt = selectedFusion.judul;
+            applyTitle.textContent = selectedFusion.judul;
+            applyTriggers.textContent = selectedFusion.trigger_1 + ' + ' + selectedFusion.trigger_2;
+            applyPlaceholder.hidden = true;
+            applyResult.hidden = false;
+            applyBtn.disabled = false;
+            applyNote.innerHTML = '<b>Siap diterapkan.</b> Pada aplikasi Gradio interaktif, simulasi memakai segmentasi area pakaian (rembg u2net_cloth_seg) + Feathered Seams tiling.';
+
+            // Smooth scroll ke section apply
+            document.querySelector('.section-apply').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    applyBtn.addEventListener('click', function () {
+        if (!selectedFusion) return;
+        applyBtn.classList.add('is-loading');
+        applyBtn.disabled = true;
+        const origHtml = applyBtn.innerHTML;
+        applyBtn.innerHTML = 'Memproses...';
+        setTimeout(function () {
+            applyBtn.classList.remove('is-loading');
+            applyBtn.disabled = false;
+            applyBtn.innerHTML = origHtml;
+            applyNote.innerHTML = '<b>Simulasi selesai (demo).</b> Hasil akhir dapat dilihat lengkap di aplikasi Gradio interaktif (<code>app.py</code>).';
+        }, 900);
+    });
+
+    // ====================== INIT ======================
+    function populateNarrative() {
+        // Isi narrative-body dari data fusions.filosofi_fusion
+        cardsAll.forEach(function (card) {
+            const body = card.querySelector('.narrative-body');
+            if (!body) return;
+            const dataId = card.dataset.id;
+            // Coba cocokkan ID langsung, atau dengan prefix "fusion_" yang dihapus
+            let f = fusions.find(function (x) { return x.id === dataId; });
+            if (!f && dataId.startsWith('fusion_')) {
+                const stripped = dataId.substring(7);
+                f = fusions.find(function (x) { return x.id === stripped; });
+            }
+            // Fallback: cocokkan berdasarkan budaya_1 + budaya_2
+            if (!f) {
+                const c1 = card.querySelector('.region-1')?.textContent?.trim();
+                const c2 = card.querySelector('.region-2')?.textContent?.trim();
+                if (c1 && c2) {
+                    f = fusions.find(function (x) {
+                        return (x.budaya_1 === c1 && x.budaya_2 === c2)
+                            || (x.budaya_1 === c2 && x.budaya_2 === c1);
+                    });
+                }
+            }
+            if (!f) return;
+            const text = f.filosofi_fusion || '';
+            // Konversi **bold** markdown ke <strong>
+            body.innerHTML = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        });
+    }
+
+    populateNarrative();
+    applyFilters();
+})();
+</script>
+
+</body>
+</html>
