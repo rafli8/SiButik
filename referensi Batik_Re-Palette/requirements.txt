@@ -1,0 +1,6 @@
+gradio
+Pillow
+numpy
+opencv-python-headless
+scipy
+rembg[cpu]

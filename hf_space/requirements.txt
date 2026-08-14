@@ -1,0 +1,14 @@
+gradio>=4.0.0
+Pillow
+numpy
+opencv-python-headless
+scipy
+rembg[cpu]
+huggingface_hub>=0.20.0
+
+# Untuk SDXL + LoRA generation (lora_generator.py)
+torch>=2.0.0
+diffusers>=0.30.0
+transformers>=4.40.0
+accelerate>=0.27.0
+safetensors>=0.4.0
